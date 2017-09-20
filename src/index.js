@@ -63,19 +63,21 @@ export default () => {
         exit(programPath: Path, state: State) {
           const { file } = state
           removeFlowComment(file.ast.comments)
-
-          const filename = file.opts.filename
-          const { input, globOptions = {} } = state.opts
+          const { input, output, globOptions = {} } = state.opts
 
           if (!input) {
             throw new Error('require input option')
+          }
+
+          if (!output) {
+            throw new Error('require output option')
           }
 
           const files = globby.sync(input, globOptions)
 
           const imports = files
             .map(f => ({
-              source: getImportPath(filename, f),
+              source: getImportPath(output, f),
               name: createActionName(f),
             }))
             .map(({ name, source }) => {
