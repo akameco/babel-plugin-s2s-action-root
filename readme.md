@@ -34,7 +34,11 @@ export type Action = AppAction | BobAction;
 
 ```
 {
-  ['s2s-action-root', {input: 'containers/**/actionTypes.js', globOptions: {}}]
+  ['s2s-action-root', {
+    input: 'containers/**/actionTypes.js',
+    output: 'types/action.js',
+    globOptions: {}
+  }]
 }
 ```
 
@@ -44,6 +48,13 @@ type: `string` <br>
 required: true
 
 glob pattern.
+
+#### output
+
+type: `string` <br>
+required: true
+
+outputh path.
 
 #### blobOptions
 
