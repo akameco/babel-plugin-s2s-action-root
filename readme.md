@@ -60,6 +60,14 @@ outputh path.
 
 See https://github.com/isaacs/node-glob#options
 
+## Related
+- [**akameco/s2s**<br>Source to Source](https://github.com/akameco/s2s)
+- [**akameco/babel-plugin-s2s-state-root**<br>compose flow + redux state types](https://github.com/akameco/babel-plugin-s2s-state-root)
+- [**akameco/babel-plugin-s2s-reducer-root**<br>compose redux reducer](https://github.com/akameco/babel-plugin-s2s-reducer-root)
+- [**akameco/babel-plugin-s2s-action-types**<br>generate redux action types](https://github.com/akameco/babel-plugin-s2s-action-types)
+- [**akameco/babel-plugin-s2s-action-creater**<br>generate redux action creater](https://github.com/akameco/babel-plugin-s2s-action-creater)
+
+
 ## License
 
 MIT © [akameco](http://akameco.github.io)
